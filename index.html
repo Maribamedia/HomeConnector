@@ -13,16 +13,20 @@
     <meta property="og:url" content="https://yourusername.github.io/repository-name">
     <meta name="twitter:card" content="summary_large_image">
     
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/color/96/000000/fiber-optic.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/color/32/000000/fiber-optic.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://img.icons8.com/color/16/000000/fiber-optic.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="https://img.icons8.com/color/96/000000/fiber-optic.png" color="#0033a0">
-    <link rel="shortcut icon" href="https://img.icons8.com/color/96/000000/fiber-optic.png">
-    <meta name="msapplication-TileColor" content="#0033a0">
-    <meta name="msapplication-config" content="/browserconfig.xml">
+    <!-- Favicon Package - Full Integration -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f4e6.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f4e6.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/npm/emoji-datasource-apple/img/apple/64/1f4e6.png">
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22grad%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22><stop offset=%220%25%22 stop-color=%220033a0/><stop offset=%22100%25%22 stop-color=%220056cc/></linearGradient></defs><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22url(%23grad)%22/><path d=%22M30,40 L70,40 L70,60 L30,60 Z M35,30 L65,30 L65,35 L35,35 Z M40,20 L60,20 L60,25 L40,25 Z%22 fill=%22white%22/></svg>" type="image/svg+xml">
     <meta name="theme-color" content="#0033a0">
+    
+    <!-- Favicon Fallbacks for Different Browsers -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📦</text></svg>">
+    <meta name="msapplication-TileColor" content="#0033a0">
+    <meta name="msapplication-TileImage" content="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22grad%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22><stop offset=%220%25%22 stop-color=%220033a0/><stop offset=%22100%25%22 stop-color=%220056cc/></linearGradient></defs><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22url(%23grad)%22/><path d=%22M30,40 L70,40 L70,60 L30,60 Z M35,30 L65,30 L65,35 L35,35 Z M40,20 L60,20 L60,25 L40,25 Z%22 fill=%22white%22/></svg>">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Fibre%20Connector%22%2C%22short_name%22%3A%22FibreConnector%22%2C%22theme_color%22%3A%22%230033a0%22%2C%22background_color%22%3A%22%23ffffff%22%2C%22display%22%3A%22standalone%22%2C%22scope%22%3A%22%2F%22%2C%22start_url%22%3A%22%2F%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2Femoji-datasource-apple%2Fimg%2Fapple%2F64%2F1f4e6.png%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fpng%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2Femoji-datasource-apple%2Fimg%2Fapple%2F64%2F1f4e6.png%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fpng%22%7D%5D%7D">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -282,6 +286,16 @@
         0% { left: -100%; }
         100% { left: 100%; }
       }
+      
+      /* Favicon-related animations */
+      .favicon-glow {
+        animation: faviconPulse 2s ease-in-out infinite;
+      }
+      
+      @keyframes faviconPulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+      }
     </style>
 </head>
 <body class="text-accent-900 antialiased">
@@ -289,9 +303,10 @@
     <nav class="fixed w-full glass-effect z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <!-- Logo -->
+                <!-- Logo with Favicon -->
                 <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center favicon-glow">
+                        <!-- SVG Favicon Representation -->
                         <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M21 11c0-5-4-9-9-9s-9 4-9 9c0 4.1 2.5 7.6 6 8.7V22h6v-2.3c3.5-1.1 6-4.6 6-8.7zm-9-7c3.9 0 7 3.1 7 7 0 3.5-2.6 6.4-6 6.9V20h-2v-3.1c-3.4-.5-6-3.4-6-6.9 0-3.9 3.1-7 7-7zm-1 12h2v-2h-2v2zm0-4h2V7h-2v4z"/>
                         </svg>
@@ -1158,6 +1173,36 @@
                 }
             });
         });
+        
+        // Favicon animation
+        const faviconAnimation = document.createElement('style');
+        faviconAnimation.innerHTML = `
+            @keyframes faviconSpin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            .favicon-spin {
+                animation: faviconSpin 10s linear infinite;
+            }
+        `;
+        document.head.appendChild(faviconAnimation);
+        
+        // Add favicon animation to logo on hover
+        const logo = document.querySelector('nav a.group');
+        if (logo) {
+            logo.addEventListener('mouseenter', () => {
+                const icon = logo.querySelector('svg');
+                if (icon) {
+                    icon.classList.add('favicon-spin');
+                }
+            });
+            logo.addEventListener('mouseleave', () => {
+                const icon = logo.querySelector('svg');
+                if (icon) {
+                    icon.classList.remove('favicon-spin');
+                }
+            });
+        }
     </script>
 </body>
 </html>
