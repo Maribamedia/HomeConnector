@@ -48,7 +48,7 @@
               'slide-up': 'slideUp 0.6s ease-out',
               'pulse-subtle': 'pulseSubtle 3s infinite',
               'float': 'float 6s ease-in-out infinite',
-              'slide': 'slide 40s linear infinite',
+              'slide': 'slide 8s linear infinite',
             },
             keyframes: {
               fadeIn: {
@@ -69,7 +69,7 @@
               },
               slide: {
                 '0%': { transform: 'translateX(0)' },
-                '100%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(-800%)' },
               }
             }
           }
@@ -243,7 +243,7 @@
         display: flex;
         width: 800%; /* 8 slides at 100% each */
         height: 100%;
-        animation: slide 40s linear infinite;
+        animation: slide 8s linear infinite;
       }
       
       .slide {
@@ -354,7 +354,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section - FIXED WHATSAPP BUTTON -->
+    <!-- Hero Section - FIXED WHATSAPP BUTTON ALIGNMENT -->
     <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-24 gradient-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-5xl mx-auto">
@@ -404,7 +404,7 @@
                         </div>
                     </div>
 
-                    <!-- Hero Right Side -->
+                    <!-- Hero Right Side - FIXED WHATSAPP BUTTON ALIGNMENT -->
                     <div class="relative animate-on-scroll">
                         <div class="bg-white rounded-2xl p-8 border-2 border-primary-600 shadow-2xl">
                             <div class="text-center mb-6">
@@ -421,13 +421,14 @@
                                 </div>
                             </div>
                             
-                            <!-- Quick WhatsApp CTA -->
+                            <!-- Quick WhatsApp CTA - FIXED ALIGNMENT -->
                             <div class="space-y-4">
                                 <p class="text-center text-gray-600 text-sm">
                                     Need painting in <strong>Bronkhorstspruit</strong>? Paving in <strong>Pretoria East</strong>? Tiling in <strong>Cullinan</strong>? Chat with us!
                                 </p>
-                                <a href="https://wa.me/27766473499?text=Hi%20Home%20Connector!%20I%20need%20home%20improvement%20services%20in%20[Your%20Location]%20for%20[Service%20Needed]." target="_blank" class="w-full whatsapp-button py-3.5 rounded-lg font-bold text-center hover:bg-green-600 transition-colors">
-                                    📱 WhatsApp Our Local Team
+                                <a href="https://wa.me/27766473499?text=Hi%20Home%20Connector!%20I%20need%20home%20improvement%20services%20in%20[Your%20Location]%20for%20[Service%20Needed]." target="_blank" class="w-full whatsapp-button py-3.5 rounded-lg font-bold text-center hover:bg-green-600 transition-colors flex items-center justify-center">
+                                    <span class="mr-2">📱</span>
+                                    <span>WhatsApp Our Local Team</span>
                                 </a>
                             </div>
                         </div>
@@ -437,7 +438,7 @@
         </div>
     </section>
 
-    <!-- Services Slideshow Section - FIXED IMAGES -->
+    <!-- Services Slideshow Section - FIXED IMAGES & TIMING (1 second per slide) -->
     <section id="slideshow" class="section-padding bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center mb-12">
@@ -445,7 +446,7 @@
                 <p class="text-lg text-gray-600">See our quality work across Bronkhorstspruit, Pretoria, Cullinan & Rayton</p>
             </div>
 
-            <!-- Image Slideshow - FIXED WITH REAL IMAGES -->
+            <!-- Image Slideshow - FIXED WITH 1 SECOND PER SLIDE -->
             <div class="slideshow-container mb-12 animate-on-scroll">
                 <div class="slideshow-track">
                     <!-- Painting Slide -->
