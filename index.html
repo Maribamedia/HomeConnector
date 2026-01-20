@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Home Connector | Professional Home Improvement Services in Gauteng</title>
-    <meta name="description" content="Home improvement experts: Painting, paving, plastering, brickwork, tiling, remodeling. 30+ years experience. WhatsApp for free quote!">
+    <meta name="description" content="Home improvement experts: Painting, paving, plastering, brickwork, tiling, remodeling, roofing. 30+ years experience. WhatsApp for free quote!">
     
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Home Connector | Home Improvement Experts in Gauteng">
-    <meta property="og:description" content="30+ years experience in painting, paving, plastering, brickwork, tiling & remodeling. WhatsApp for free assessment!">
+    <meta property="og:description" content="30+ years experience in painting, paving, plastering, brickwork, tiling, roofing & remodeling. WhatsApp for free assessment!">
     <meta property="og:image" content="https://raw.githubusercontent.com/Maribamedia/HomeConnector/main/slides/slide1.jpg">
     <meta property="og:url" content="https://Maribamedia.github.io/HomeConnector">
     <meta name="twitter:card" content="summary_large_image">
@@ -48,7 +48,7 @@
               'slide-up': 'slideUp 0.6s ease-out',
               'pulse-subtle': 'pulseSubtle 3s infinite',
               'float': 'float 6s ease-in-out infinite',
-              'slide': 'slide 64s linear infinite',
+              'slide': 'slide 24s linear infinite',
             },
             keyframes: {
               fadeIn: {
@@ -69,14 +69,18 @@
               },
               slide: {
                 '0%': { transform: 'translateX(0%)' },
-                '12.5%': { transform: 'translateX(0%)' },
-                '25%': { transform: 'translateX(-12.5%)' },
-                '37.5%': { transform: 'translateX(-25%)' },
-                '50%': { transform: 'translateX(-37.5%)' },
-                '62.5%': { transform: 'translateX(-50%)' },
-                '75%': { transform: 'translateX(-62.5%)' },
-                '87.5%': { transform: 'translateX(-75%)' },
-                '100%': { transform: 'translateX(-87.5%)' }
+                '8.33%': { transform: 'translateX(0%)' },
+                '16.66%': { transform: 'translateX(-12.5%)' },
+                '25%': { transform: 'translateX(-25%)' },
+                '33.33%': { transform: 'translateX(-37.5%)' },
+                '41.66%': { transform: 'translateX(-50%)' },
+                '50%': { transform: 'translateX(-62.5%)' },
+                '58.33%': { transform: 'translateX(-75%)' },
+                '66.66%': { transform: 'translateX(-87.5%)' },
+                '75%': { transform: 'translateX(-87.5%)' },
+                '83.33%': { transform: 'translateX(-87.5%)' },
+                '91.66%': { transform: 'translateX(-87.5%)' },
+                '100%': { transform: 'translateX(0%)' }
               }
             }
           }
@@ -187,7 +191,7 @@
         display: flex;
         width: 800%; /* 8 slides at 100% each */
         height: 100%;
-        animation: slide 64s linear infinite;
+        animation: slide 24s linear infinite;
       }
 
       .slide {
@@ -249,6 +253,33 @@
       .service-icon {
         font-size: 2rem;
         margin-bottom: 1rem;
+      }
+      
+      .service-details {
+        text-align: left;
+        padding-left: 0.5rem;
+      }
+      
+      .service-details ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0.5rem 0;
+      }
+      
+      .service-details li {
+        position: relative;
+        padding-left: 1.2rem;
+        margin-bottom: 0.25rem;
+        font-size: 0.75rem;
+        color: #4b5563;
+      }
+      
+      .service-details li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #0d9488;
+        font-weight: bold;
       }
     </style>
 </head>
@@ -329,7 +360,7 @@
                         <div class="bg-white rounded-xl p-4 mb-6 border border-primary-100">
                             <p class="text-lg text-gray-700">
                                 Quality craftsmanship guaranteed with 
-                                <span class="font-bold text-primary-600">30+ years experience</span> in painting, paving, plastering, brickwork, tiling & remodeling.
+                                <span class="font-bold text-primary-600">30+ years experience</span> in painting, paving, plastering, brickwork, tiling, roofing & remodeling.
                             </p>
                         </div>
 
@@ -396,7 +427,7 @@
         </div>
     </section>
 
-    <!-- Slideshow Section - 8 SLIDES -->
+    <!-- Slideshow Section - 8 SLIDES (3 seconds each) -->
     <section id="slideshow" class="py-12 md:py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center mb-8">
@@ -518,7 +549,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 <!-- Painting -->
-                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll text-center">
+                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll">
                     <div class="service-icon">🎨</div>
                     <h3 class="text-lg font-bold mb-2">Professional Painting</h3>
                     <p class="text-gray-600 text-sm mb-3">Interior & exterior painting with premium materials.</p>
@@ -528,7 +559,7 @@
                 </div>
 
                 <!-- Paving -->
-                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll text-center">
+                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll">
                     <div class="service-icon">🧱</div>
                     <h3 class="text-lg font-bold mb-2">Expert Paving</h3>
                     <p class="text-gray-600 text-sm mb-3">Driveways, walkways, and patio paving.</p>
@@ -538,7 +569,7 @@
                 </div>
 
                 <!-- Plastering -->
-                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll text-center">
+                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll">
                     <div class="service-icon">🏗️</div>
                     <h3 class="text-lg font-bold mb-2">Precision Plastering</h3>
                     <p class="text-gray-600 text-sm mb-3">Smooth, even plaster finishes.</p>
@@ -548,7 +579,7 @@
                 </div>
 
                 <!-- Brickwork -->
-                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll text-center">
+                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll">
                     <div class="service-icon">🧱</div>
                     <h3 class="text-lg font-bold mb-2">Quality Brickwork</h3>
                     <p class="text-gray-600 text-sm mb-3">Structural and decorative brickwork.</p>
@@ -558,7 +589,7 @@
                 </div>
 
                 <!-- Ceiling Installation -->
-                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll text-center">
+                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll">
                     <div class="service-icon">⬆️</div>
                     <h3 class="text-lg font-bold mb-2">Ceiling Installation</h3>
                     <p class="text-gray-600 text-sm mb-3">Gypsum and suspended ceilings.</p>
@@ -568,7 +599,7 @@
                 </div>
 
                 <!-- Tiling -->
-                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll text-center">
+                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll">
                     <div class="service-icon">🔲</div>
                     <h3 class="text-lg font-bold mb-2">Professional Tiling</h3>
                     <p class="text-gray-600 text-sm mb-3">Floor and wall tiling with perfect alignment.</p>
@@ -578,7 +609,7 @@
                 </div>
 
                 <!-- Rhinolite -->
-                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll text-center">
+                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll">
                     <div class="service-icon">🛡️</div>
                     <h3 class="text-lg font-bold mb-2">Rhinolite Applications</h3>
                     <p class="text-gray-600 text-sm mb-3">Textured wall coatings for protection.</p>
@@ -588,11 +619,64 @@
                 </div>
 
                 <!-- Remodeling -->
-                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll text-center">
+                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll">
                     <div class="service-icon">🏠</div>
                     <h3 class="text-lg font-bold mb-2">Complete Remodeling</h3>
                     <p class="text-gray-600 text-sm mb-3">Full home transformations and renovations.</p>
                     <a href="https://wa.me/27766473499?text=Hi!%20I%20need%20remodeling%20services." target="_blank" class="text-primary-600 font-semibold text-sm hover:text-primary-700">
+                        WhatsApp Quote →
+                    </a>
+                </div>
+
+                <!-- NEW: Tiled Roofs -->
+                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll">
+                    <div class="service-icon">🏠</div>
+                    <h3 class="text-lg font-bold mb-2">Tiled Roofs</h3>
+                    <div class="service-details">
+                        <ul>
+                            <li>Replace broken tiles</li>
+                            <li>Seal ridges</li>
+                            <li>Sealer applied</li>
+                            <li>2x roof acrylic/rubber</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/27766473499?text=Hi!%20I%20need%20tiled%20roof%20services." target="_blank" class="text-primary-600 font-semibold text-sm hover:text-primary-700">
+                        WhatsApp Quote →
+                    </a>
+                </div>
+
+                <!-- NEW: Steel Roofs -->
+                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll">
+                    <div class="service-icon">🏭</div>
+                    <h3 class="text-lg font-bold mb-2">Steel Roofs</h3>
+                    <div class="service-details">
+                        <ul>
+                            <li>Sand down roof</li>
+                            <li>Check screws</li>
+                            <li>Waterproofing</li>
+                            <li>Primer applied</li>
+                            <li>2x coats of roof paint</li>
+                            <li>2x coats of rubber flex</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/27766473499?text=Hi!%20I%20need%20steel%20roof%20services." target="_blank" class="text-primary-600 font-semibold text-sm hover:text-primary-700">
+                        WhatsApp Quote →
+                    </a>
+                </div>
+
+                <!-- NEW: Walls -->
+                <div class="bg-white rounded-xl p-5 border border-gray-200 card-hover animate-on-scroll">
+                    <div class="service-icon">🧱</div>
+                    <h3 class="text-lg font-bold mb-2">Walls</h3>
+                    <div class="service-details">
+                        <ul>
+                            <li>Surface well prepared</li>
+                            <li>Patch with coprox</li>
+                            <li>Undercoat to be applied</li>
+                            <li>2x coats of dulx weather coat</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/27766473499?text=Hi!%20I%20need%20wall%20services." target="_blank" class="text-primary-600 font-semibold text-sm hover:text-primary-700">
                         WhatsApp Quote →
                     </a>
                 </div>
@@ -989,13 +1073,13 @@
                         <span>Connector</span>
                     </div>
                     <p class="mb-4 text-gray-400 text-sm">
-                        Professional home improvement services with 30+ years experience in painting, paving, plastering, brickwork, tiling, and remodeling.
+                        Professional home improvement services with 30+ years experience in painting, paving, plastering, brickwork, tiling, roofing, and remodeling.
                     </p>
                 </div>
                 
                 <div>
                     <h4 class="font-bold mb-3 text-sm">Our Services</h4>
-                    <div class="grid grid-cols-2 gap-2 text-xs text-gray-400">
+                    <div class="grid grid-cols-3 gap-2 text-xs text-gray-400">
                         <a href="#services">Painting</a>
                         <a href="#services">Paving</a>
                         <a href="#services">Plastering</a>
@@ -1004,6 +1088,9 @@
                         <a href="#services">Ceilings</a>
                         <a href="#services">Rhinolite</a>
                         <a href="#services">Remodeling</a>
+                        <a href="#services">Tiled Roofs</a>
+                        <a href="#services">Steel Roofs</a>
+                        <a href="#services">Walls</a>
                     </div>
                 </div>
                 
